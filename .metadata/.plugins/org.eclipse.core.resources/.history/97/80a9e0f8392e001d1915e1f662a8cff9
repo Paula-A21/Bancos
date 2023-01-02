@@ -1,0 +1,94 @@
+package dominio;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.ArrayList;
+
+public class Cliente implements Comparable<Cliente>{
+
+	  // Atributos para datos
+	  private String  primerNombre;
+	  private String  apellido;
+	  // Atributos para la agregación
+	  private List<Cuenta> cuentas;
+
+	  public Cliente(String p, String a) {
+	    primerNombre = p;
+	    apellido = a;
+	    
+	    cuentas = new ArrayList <Cuenta> ();
+	  }
+	  
+	@Override
+	  public boolean equals (Object obj) {
+		  
+	 	  if (this == obj) {
+			  return true;
+	 	  }
+	 	  if (obj == null) {
+			  return false;
+		  }
+	 	  if (getClass() != obj.getClass()) {
+			  return false;
+		  }
+		  Cliente other = (Cliente) obj;
+		  if (apellido != other.apellido) {
+			  return false;
+		  }
+		  if (primerNombre != other.primerNombre) {
+			  return false;
+		  }
+		  return true;
+		  }
+	  
+	  public int hashCode () {
+		  
+		  final int prime = 31;
+		  int result = 1;
+		  
+		  result = prime * result + Objects.hashCode(this.apellido);
+		  result = prime * result + Objects.hashCode(this.primerNombre);
+		  
+		  return result;
+	  }
+
+	  
+	@Override
+	public int compareTo(Cliente o) {
+ 
+		if (apellido.compareTo(o.apellido) > 0 || primerNombre.compareTo(o.primerNombre) > 0) {
+			return 1;
+		}else if (apellido.compareTo(o.apellido) < 0 || primerNombre.compareTo(o.primerNombre) < 0) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
+	
+	}
+	
+	  
+	  public String getPrimerNombre() {
+	    return primerNombre;
+	  }
+	  public String getApellido() {
+	    return apellido;
+	  }
+	  
+	  public void agregaCuenta(Cuenta cta) {
+		  
+		  cuentas.add(cta);
+	  }
+	  
+	  public Cuenta getCuenta(int indice_cuenta) {
+	    
+		  return cuentas.get(indice_cuenta);
+	  }
+	 
+	  public int getNumeroDeCuentas () {
+		  
+		  return cuentas.size();
+	  }
+	}
+
+

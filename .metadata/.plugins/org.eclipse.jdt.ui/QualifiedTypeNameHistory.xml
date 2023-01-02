@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="operacionesBancarias.Cuenta"/>
+    <fullyQualifiedTypeName name="operacionesBancarias.Banco"/>
+    <fullyQualifiedTypeName name="operacionesBancarias.Cliente"/>
+    <fullyQualifiedTypeName name="operacionesBancarias.CajaDeAhorros"/>
+    <fullyQualifiedTypeName name="operacionesBancarias.CuentaCorriente"/>
+    <fullyQualifiedTypeName name="puebaOperacionesBancarias.ReporteCliente"/>
+    <fullyQualifiedTypeName name="dominio.ExcepcionSobregiro"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="reportes.ReporteCliente"/>
+    <fullyQualifiedTypeName name="dominio.Cliente"/>
+    <fullyQualifiedTypeName name="dominio.Banco"/>
+    <fullyQualifiedTypeName name="dominio.Cuenta"/>
+    <fullyQualifiedTypeName name="dominio.CajaDeAhorro"/>
+    <fullyQualifiedTypeName name="dominio.CuentaCorriente"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+</qualifiedTypeNameHistroy>

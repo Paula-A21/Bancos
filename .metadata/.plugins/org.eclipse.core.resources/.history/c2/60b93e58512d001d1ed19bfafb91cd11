@@ -1,0 +1,41 @@
+package dominio;
+
+import java.util.List;
+
+/**
+* La clase Banco implementa el patrón de diseño Singleton
+* porque sólo puede haber un objeto del tipo Banco
+*/
+public class Banco {
+ /**
+  * La variable de referencia qua almacena la instancia de Banco.
+  */
+ private static final Banco instanciaBanco = new Banco();
+ public static Banco getBanco() {
+   return instanciaBanco;
+ }
+
+ private static final int MAX_CLIENTES = 10;
+ private static final double PORCENTAJE_CAJA_AHORRO = 3.5;
+ private static List<Cliente>[] clientes;
+
+
+ public Banco() {
+	 
+   clientes = new Cliente[MAX_CLIENTES];
+  
+ }
+
+ public void agregaCliente(String nombre, String apellido) {
+	 
+   int i = numeroDeClientes++;
+   clientes[i] = new Cliente(nombre, apellido);
+ }
+ 
+ public Cliente getCliente(int indiceCliente) {
+   return clientes[indiceCliente];
+ }
+ public int getNumeroDeClientes() {
+   return numeroDeClientes;
+ }
+}

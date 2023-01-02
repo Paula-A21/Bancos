@@ -1,0 +1,45 @@
+package dominio;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Cliente {
+
+	  // Atributos para datos
+	  private String   primerNombre;
+	  private String   apellido;
+	  // Atributos para la agregación
+	  private List<Cuenta> cuentas;
+
+	  public Cliente(String p, String a) {
+	    primerNombre = p;
+	    apellido = a;
+	    
+	    cuentas = new ArrayList <Cuenta> (10);
+	  }
+
+	  public String getPrimerNombre() {
+	    return primerNombre;
+	  }
+	  public String getApellido() {
+	    return apellido;
+	  }
+	  
+	  public void agregaCuenta(Cuenta cta) {
+		  
+		  cuentas.add(cta);
+	    
+	  }
+	  
+	  public Cuenta getCuenta(int indice_cuenta) {
+	    
+		  return cuentas.get(indice_cuenta);
+	  }
+	 
+	  public int getNumeroDeCuenta () {
+		  
+		  return cuentas.size();
+	  }
+	}
+
+

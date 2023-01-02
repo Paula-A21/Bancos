@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\pauli\Desktop\Back up\Curso de JAVA\Ejercicios\Bancos\.metadata\.plugins\org.eclipse.jdt.core
+82081685.index
+635046784.index
